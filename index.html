@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <script src="character.js"></script>
+    <script src="game.js"></script>
+    <script src="minigame.js"></script>
+    <script src="defeatscreen.js"></script>
+    <script src="victoryscreen.js"></script>
+    <title>Yellow Emotions, Black Emotions</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;  }
+        
+        canvas {
+            border: 5px solid #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <script type="text/javascript">
+        /*Global variables definition*/
+        const config = {
+            type: Phaser.AUTO,
+            scale: {
+                mode: Phaser.Scale.FIT
+            },
+            autoCenter: Phaser.Scale.CENTER,
+            width: 1300, //largura da tela do jogo
+            height: 820, //altura da tela do jogo
+            backgroundColor: '#39addd',
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 0 },
+                    debug: false 
+                }
+            },
+            parent: "game",
+            dom:{
+               createContainer: true,
+            },
+            scene: [CharacterSelector, Game, MiniGame, DefeatScreen, VictoryScreen]
+        };
+        
+        var game = new Phaser.Game(config);
+        game.scene.start('CharacterSelector');
+    </script>
+    
+</body>
+</html>
