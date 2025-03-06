@@ -1,6 +1,0 @@
-Jogo com três plataformas e projéteis que atingem randômicamente até duas dessas plataformas ao mesmo tempo
-O jogador deve demonstrar bom reflexo para se locomover entre as plataformas e evitar os projéteis
-O jogador deve reunir coletáveis para avançar de fase e concluir o jogo 
-O jogo aumenta de dificuldade progressivamente
-Descrever o  movimento dos projéteis com funções matemáticas
-Funções padronizadas para o fim do jogo
